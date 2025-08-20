@@ -26,34 +26,38 @@
 
             <!-- Right Column (Images) -->
             <div class="col-lg-6  mb-2 mb-lg-0">
-                <div class="container">
-                    <div class="row px-0">
-                        <!-- Left Column -->
-                        <div class="col-md-6 d-flex flex-column px-0">
-                            <div class="flex-grow-1 mb-3">
-                                <img src="/img/homepage/about-1.jpg"
-                                    class="img-fluid w-100 h-100 rounded object-fit-cover" alt="Image 1">
-                            </div>
-                            <div style="height: 110px;">
-                                <img src="/img/homepage/about-2.jpg"
-                                    class="img-fluid w-100 h-100 rounded object-fit-cover" alt="Image 2">
-                            </div>
+                <div class="row px-0">
+                    <!-- Left Column -->
+                    <div class="col-md-6 d-flex flex-column px-0">
+                        <div class="flex-grow-1 mb-3">
+                            <img src="/img/homepage/about-1.webp" class="img-fluid w-100 h-100 rounded object-fit-cover"
+                                alt="Image 1">
                         </div>
+                        <div style="height: 110px;" class="d-none d-md-block">
+                            <img src="/img/homepage/about-2.webp" class="img-fluid w-100 h-100 rounded object-fit-cover"
+                                alt="Image 2">
+                        </div>
+                    </div>
 
-                        <!-- Right Column -->
-                        <div class="col-md-6 d-flex flex-column">
-                            <div style="height: 110px;">
-                                <img src="/img/homepage/about-3.jpg"
-                                    class="img-fluid w-100 h-100 rounded object-fit-cover" alt="Image 3">
-                            </div>
-                            <div class="flex-grow-1 mt-3">
-                                <img src="/img/homepage/about-4.jpg"
-                                    class="img-fluid w-100 h-100 rounded object-fit-cover" alt="Image 4">
-                            </div>
+                    <!-- Right Column -->
+                    <div class="col-md-6 d-flex flex-column">
+                        <div style="height: 110px;" class="d-none d-md-block">
+                            <img src="/img/homepage/about-3.webp" class="img-fluid w-100 h-100 rounded object-fit-cover"
+                                alt="Image 3">
+                        </div>
+                        <div class="flex-grow-1 mt-3">
+                            <img src="/img/homepage/about-4.webp" class="img-fluid w-100 h-100 rounded object-fit-cover"
+                                alt="Image 4">
                         </div>
                     </div>
                 </div>
-                <div class="d-flex align-items-end justify-content-end position-relative mt-5">
+
+            </div>
+
+        </div>
+    </div>
+
+    {{-- <div class="d-flex align-items-end justify-content-end position-relative mt-5">
                     <!-- Horizontal line -->
                     <div class="flex-grow-1 border-top border-primary" style="border-width: 2px;"></div>
 
@@ -62,9 +66,41 @@
                         <img src="img/homepage/cleaner-icon.webp" alt="Reinigung" class="img-fluid"
                             style="width: 40px; height: 40px;">
                     </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
+                </div> --}}
 </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Swiper
+            var swiper = new Swiper(".serviceSwiper", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                    },
+                },
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+            });
+        });
+    </script>

@@ -2,3 +2,4 @@
 @section('content')
 @include('homepage.sections.hero')
 @include('homepage.sections.first')
+@include('homepage.sections.second')
