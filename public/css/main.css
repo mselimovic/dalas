@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Work Sans', sans-serif !important;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+.fs-2 {
+  font-size: 1.5rem; 
+}
+.fs-3 {
+  font-size: 1.25rem; 
+}
+.navbar {
+    transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.7);
+    /* light glass white */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    animation: navbarBounce 0.5s ease;
+}
+
+@keyframes navbarBounce {
+    0% {
+        transform: translateY(-20%);
+    }
+
+    60% {
+        transform: translateY(5px);
+    }
+
+    80% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.navbar .nav-link {
+    font-family: 'Work Sans', sans-serif;
+    color: #555555;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #6ec0d8 !important;
+}
+@media (max-width: 991.98px) { 
+  .navbar {
+    transition: all 0.4s ease;
+    background-color: #f8f9fa;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.7);
+    animation: navbarBounce 0.5s ease;
+}
+}
+/* hero section */
+.hero {
+    min-height: 100vh;
+    background: url('/img/homepage/hero-background.webp') no-repeat right center;
+    background-size: cover;
+    position: relative;
+}
+
+
+@media (max-width: 991px) {
+    .hero {
+        background-position: center top;
+        text-align: center;
+        padding: 4rem 1rem;
+    }
+}
