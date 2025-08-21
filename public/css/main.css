@@ -100,54 +100,191 @@ h6 {
 }
 
 /* second section */
- .service-card {
-            border: 2px solid #eee;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            background: #fff;
-            padding-top: 70px;
-            position: relative;
-            height: 100%;
-        }
-        
-        .service-card .icon-circle {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 2px solid #eee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            color: #6EC0D8;
-            background: white;
-            position: absolute;
-            top: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            transition: all 0.3s ease;
-        }
-        
-        .service-card.active,
-        .service-card:hover {
-            background: #6EC0D8;
-            border-color: #6EC0D8;
-        }
-        
-        .service-card.active .icon-circle,
-        .service-card:hover .icon-circle {
-            border-color: #6EC0D8;
-            color: #6EC0D8;
-            background-color: white;
-        }
-        
-        /* Text color changes on hover/active */
-        .service-card.active h5,
-        .service-card:hover h5,
-        .service-card.active p,
-        .service-card:hover p {
-            color: white !important;
-        }
+.glider-slide {
+    padding: 60px 12px 20px;
+    /* Added top padding to make space for icons */
+    height: auto;
+}
 
-        
+.service-card {
+    border: 2px solid #eee;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background: #fff;
+    padding: 70px 20px 20px;
+    position: relative;
+    height: 100%;
+}
+
+.service-card .icon-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #6EC0D8;
+    background: white;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-card.active,
+.service-card:hover {
+    background: #6EC0D8;
+    border-color: #6EC0D8;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-card.active .icon-circle,
+.service-card:hover .icon-circle {
+    border-color: #6EC0D8;
+    color: #6EC0D8;
+    background-color: white;
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* Text color changes on hover/active */
+.service-card.active h5,
+.service-card:hover h5,
+.service-card.active p,
+.service-card:hover p {
+    color: white !important;
+}
+
+/* Glider adjustments */
+.glider-contain {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.glider {
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.glider-prev,
+.glider-next {
+    top: 40%;
+    transform: translateY(-50%);
+    color: #6EC0D8;
+
+    z-index: 10;
+}
+
+.glider-prev:hover,
+.glider-next:hover {
+    transform: translateY(-50%) scale(1.1);
+     color:  #1d5668;
+}
+
+.glider-prev:focus,
+.glider-next:focus {
+    outline: none;
+}
+
+.glider-dots {
+    margin-top: 40px;
+}
+
+/* Card content styling */
+.service-card h5 {
+    margin-bottom: 15px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.service-card p {
+    min-height: 60px;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .glider-slide {
+        padding: 50px 10px 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .glider-slide {
+        padding: 50px 8px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .glider-slide {
+        padding: 50px 5px 20px;
+    }
+
+    .service-card .icon-circle {
+        width: 80px;
+        height: 80px;
+        top: -40px;
+    }
+
+    .service-card {
+        padding: 60px 15px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-card .icon-circle {
+        width: 70px;
+        height: 70px;
+        top: -35px;
+    }
+
+    .service-card {
+        padding: 50px 10px 10px;
+    }
+
+    .service-card h5 {
+        min-height: 50px;
+        font-size: 1rem;
+    }
+
+    .service-card p {
+        min-height: 50px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Section title styling */
+.section-subtitle {
+    color: #6EC0D8;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #6EC0D8;
+}
