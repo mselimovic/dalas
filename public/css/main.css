@@ -288,3 +288,90 @@ h6 {
     height: 3px;
     background: #6EC0D8;
 }
+
+/* third section */
+
+  .team-section {
+            background: 
+                        url('/img/homepage/bg-section.webp') center/cover no-repeat;
+            padding: 100px 0;
+            color: white;
+            position: relative;
+        }
+        
+    @media (max-width: 768px) {
+
+    .team-section {
+        padding: 60px 15px;
+         background: linear-gradient(rgba(110, 192, 216, 0.8), rgba(110, 192, 216, 0.8)) !important;
+    }
+    .team-section h2,
+    .team-section p,
+    .team-section a {
+        color: #333 !important; 
+    }
+    .team-section .col-lg-6:last-child .col-6 {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .team-section a.btn-outline-light {
+        border-color: #333;
+        color: #333;
+    }
+}
+
+/* fifth */
+.testimonial-card {
+    border: 2px solid #eee;
+    border-radius: 10px;
+    background: #fff;
+    padding: 50px 15px 20px;
+    position: relative;
+    width: 100%;
+    max-width: 350px; /* smaller cards */
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.testimonial-card .icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    background: #6EC0D8;
+    border-color: #6EC0D8;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card:hover .icon-circle {
+    border-color: #6EC0D8;
+    transform: translateX(-50%) scale(1.05);
+}
+
+.testimonial-card h5 {
+    margin-top: 50px;
+}
+
+.testimonial-card:hover h5,
+.testimonial-card:hover .star-rating {
+    color: white !important;
+}
+
+.star-rating {
+    font-size: 1.2rem;
+    color: #FFC107; /* gold stars */
+}

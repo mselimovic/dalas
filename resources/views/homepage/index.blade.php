@@ -3,3 +3,7 @@
 @include('homepage.sections.hero')
 @include('homepage.sections.first')
 @include('homepage.sections.second')
+@include('homepage.sections.third')
+@include('homepage.sections.fourth')
+@include('homepage.sections.fifth')
+@include('homepage.sections.last')
