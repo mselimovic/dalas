@@ -12,12 +12,12 @@
         @include('layouts.footer')
     @show
 
+
     {{-- js --}}
     {{-- <script src="{{ asset('js/main.js') }}" async="async"></script> --}}
-    <script src="{{ asset('js/bootstrap/bootstrap.bundle.min.js') }}" async="async"></script>
+    <script src="{{ asset('js/bootstrap/bootstrap.bundle.min.js') }}" defer></script>
     <script src="{{ asset('js/main.js') }}" async="async"></script>
-    {{-- css --}}
+  
 
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
+    
 </body>

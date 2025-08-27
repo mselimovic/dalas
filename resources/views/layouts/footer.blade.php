@@ -3,7 +3,7 @@
   <div class="container py-5">
       <div class="row g-5">
           <div class="col-md-6 col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-            <a class="navbar-brand" href="#"><img src="img/homepage/logo.webp" height="90px" alt="company logo" /></a>
+            <a class="navbar-brand " href="#"><img src="img/homepage/logo.webp" height="90px" alt="company logo" class="px-2"/></a>
               <p class="mb-0 px-3">Wir sind DalAs Reinigungsdienst, spezialisiert auf die professionelle Reinigung von Wohn- und Geschäftsräumen</p>
                  <div class="d-flex pt-2 px-3">
                   <a class="btn btn-outline-light btn-social" target="_blank" href="https://www.instagram.com/dalasreinigungsdienst/"><i class="fab fa-instagram"></i></a>
@@ -49,80 +49,4 @@
 </div>
  </footer>
 
- <style>
-    .footer {
-  background-size: contain;
-}
 
-
-.footer .btn.btn-social {
-  margin-right: 5px;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255,255,255,.5);
-  border: 1px solid rgba(256, 256, 256, .1);
-  border-radius: 40px;
-  transition: .3s;
-}
-
-.footer .btn.btn-social:hover {
-  color: #eeeeee;
-  background-color: #6EC0D8
-}
-
-.footer .btn.btn-link {
-  display: block;
-  margin-bottom: 10px;
-  padding: 0;
-  text-align: left;
-  font-weight: normal;
-  transition: .3s;
-   color: #eeeeee;
-}
-
-.footer .btn.btn-link:hover {
-  color: #6EC0D8;
-}
-
-.footer .btn.btn-link::before {
-  position: relative;
-  content: "\f105";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  margin-right: 10px;
-}
-
-.footer .btn.btn-link:hover {
-  letter-spacing: 1px;
-  box-shadow: none;
-}
-
-.footer .copyright {
-  padding: 25px 0;
-  font-size: 14px;
-  border-top: 1px solid rgba(256, 256, 256, .1);
-}
-
-.footer .copyright a {
-  color: rgba(255,255,255,.5);
-}
-
-.footer .copyright a:hover {
-  color: #FFFFFF;
-}
-
-.footer .footer-menu a {
-  margin-right: 15px;
-  padding-right: 15px;
-  border-right: 1px solid rgba(255, 255, 255, .1);
-}
-
-.footer .footer-menu a:last-child {
-  margin-right: 0;
-  padding-right: 0;
-  border-right: none;
-}
- </style>

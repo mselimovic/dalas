@@ -11,7 +11,7 @@
                     <div class="icon-circle">
                         <img src="/img/homepage/user.png" alt="User">
                     </div>
-                    <a href="https://share.google/ArRfPOQ0T7a9anz2c">
+                    <a href="https://share.google/ArRfPOQ0T7a9anz2c" style="text-decoration: none;">
                         <h5 class="fw-bold text-dark mt-3">SALMIR A.</h5>
                         <div class="star-rating mb-2">
                             ★★★★★
@@ -26,7 +26,7 @@
                     <div class="icon-circle">
                         <img src="/img/homepage/user.png" alt="User">
                     </div>
-                    <a href="https://share.google/ArRfPOQ0T7a9anz2c">
+                    <a href="https://share.google/ArRfPOQ0T7a9anz2c" style="text-decoration: none;">
                         <h5 class="fw-bold text-dark mt-3">K.B.</h5>
                         <div class="star-rating mb-2">
                             ★★★★★
@@ -42,7 +42,7 @@
                     <div class="icon-circle">
                         <img src="/img/homepage/user.png" alt="User">
                     </div>
-                    <a href="https://share.google/ArRfPOQ0T7a9anz2c">
+                    <a href="https://share.google/ArRfPOQ0T7a9anz2c" style="text-decoration: none;">
                         <h5 class="fw-bold text-dark mt-3">Merlin W.</h5>
                         <div class="star-rating mb-2">
                             ★★★★★

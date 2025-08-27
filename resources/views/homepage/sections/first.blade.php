@@ -21,7 +21,7 @@
                     Unterhaltsreinigung, gründliche Reinigung oder spezielle Reinigungswünsche – wir sorgen dafür, dass
                     Ihre Räume in neuem Glanz erstrahlen.
                 </p>
-                <a href="#services" class="btn btn-primary rounded-pill px-4 text-light mt-3">Unsere Services</a>
+                <a href="{{ route('services') }}" class="btn btn-primary rounded-pill px-4 text-light mt-3">Unsere Services</a>
             </div>
 
             <!-- Right Column (Images) -->
@@ -68,39 +68,3 @@
                     </div>
                 </div> --}}
 </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize Swiper
-            var swiper = new Swiper(".serviceSwiper", {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                loop: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                    },
-                    992: {
-                        slidesPerView: 3,
-                    },
-                    1200: {
-                        slidesPerView: 4,
-                    },
-                },
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-            });
-        });
-    </script>
