@@ -12,12 +12,12 @@
             </div>
           <div class="col-md-6 col-lg-3 wow fadeIn px-3 m-3 m-lg-0" data-wow-delay="0.3s" >
               <h5 class="text-primary mb-4">Leistungen</h5>
-              <a class="btn btn-link" href="" style="text-decoration: none;">Unterhaltsreinigung </a>
-              <a class="btn btn-link" href="" style="text-decoration: none;">Grundreinigung </a>
-              <a class="btn btn-link" href="" style="text-decoration: none;">Treppenhausreinigung </a>
-              <a class="btn btn-link" href="" style="text-decoration: none;">Fensterreinigung </a>
-              <a class="btn btn-link" href="" style="text-decoration: none;">Gartenpflege </a>
-              <a class="btn btn-link" href="" style="text-decoration: none;">Wohnungsreinigung </a>
+              <a class="btn btn-link" href="{{ route('services') }}" style="text-decoration: none;">Unterhaltsreinigung </a>
+              <a class="btn btn-link" href="{{ route('services') }}" style="text-decoration: none;">Grundreinigung </a>
+              <a class="btn btn-link" href="{{ route('services') }}" style="text-decoration: none;">Treppenhausreinigung </a>
+              <a class="btn btn-link" href="{{ route('services') }}" style="text-decoration: none;">Fensterreinigung </a>
+              <a class="btn btn-link" href="{{ route('services') }}" style="text-decoration: none;">Gartenpflege </a>
+              <a class="btn btn-link" href="{{ route('services') }}" style="text-decoration: none;">Wohnungsreinigung </a>
               
           </div>
           <div class="col-md-6 col-lg-4 wow fadeIn px-3 m-3 m-lg-0" data-wow-delay="0.7s">
@@ -37,10 +37,10 @@
               </div>
               <div class="col-md-6 text-center text-md-end">
                   <div class="footer-menu">
-                      <a href="">Startseite</a>
-                      <a href="">Impressum</a>
-                      <a href="">Cookies</a>
-                      <a href="">FAQs</a>
+                      <a href="{{ route('policy') }}">Datenschutzerklärung</a>
+                      <a href="{{ route('impressum') }}">Impressum</a>
+                      <a href="javascript:void(0)" onclick="showCookieBanner()">Cookie-Einstellungen</a>
+                      <a href="{{ route('faq') }}">FAQs</a>
                   </div>
               </div>
           </div>

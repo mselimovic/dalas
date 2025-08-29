@@ -1,14 +1,16 @@
 <nav id="mainNav"
     class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top z-index-100 {{ request()->routeIs('homepage') ? 'navbar-home' : 'navbar-solid' }}">
-    <div class="container-xl">
+    <div class="container-xl pt-3 pt-md-0">
+
         <!-- Logo -->
         <a class="navbar-brand d-flex align-items-center" href="{{ route('homepage') }}">
             <img src="img/homepage/logo.webp" alt="Logo" height="95" class="me-2">
         </a>
 
         <!-- Mobile toggle -->
-        <button class="navbar-toggler py-2 mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler py-2 mx-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
             Menü
             <i class="fas fa-bars ms-1"></i>
         </button>

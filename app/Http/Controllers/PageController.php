@@ -22,4 +22,18 @@ class PageController extends Controller
     {
         return view('pages.contact');   
     }
+    public function policy()
+    {
+        return view('legal.privacy');   
+    }
+
+    public function impressum()
+    {
+        return view('legal.impressum');   
+    }
+
+    public function faq()
+    {
+        return view('pages.faq');   
+    }
 }

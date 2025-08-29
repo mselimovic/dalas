@@ -100,8 +100,8 @@
             </div>
 
             <!-- arrows -->
-            <button role="button" aria-label="Previous" class="glider-prev">«</button>
-            <button role="button" aria-label="Next" class="glider-next">»</button>
+            <button role="button" aria-label="Previous" class="glider-prev ms-2">«</button>
+            <button role="button" aria-label="Next" class="glider-next me-2">»</button>
 
             <!-- dots indicator -->
             <div class="glider-dots" id="dots"></div>

@@ -621,3 +621,48 @@ h6 {
     background: url(/img/contact/contact-header.webp);
     background-size: cover;
 }
+
+  .line-input.form-control {
+    border: 0;
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent;
+  }
+  .line-input.form-control:focus {
+    box-shadow: none;
+    border-bottom-color: var(--bs-primary);
+  }
+  .contact-item svg { flex: 0 0 auto; }
+  .contact-item span { line-height: 1.4; }
+  .subject-group .btn {
+    --bs-btn-border-color: #e5e7eb;
+    --bs-btn-hover-border-color: var(--bs-primary);
+    --bs-btn-active-border-color: var(--bs-primary);
+  }
+  .contact-card { border-radius: 1rem; overflow: hidden; }
+
+    .customer-type .btn-check:checked + .btn {
+    border-color: var(--bs-primary);
+    background-color: rgba(var(--bs-primary-rgb), .1); 
+    color: var(--bs-primary);
+
+  }
+
+  .customer-type .btn-check:checked + .btn svg {
+    color: var(--bs-primary);
+  }
+
+  .customer-type .btn {
+    transition: all 0.2s ease;
+  }
+
+  .customer-type .btn:hover {
+    border-color: var(--bs-primary);
+    background-color: rgba(var(--bs-primary-rgb), .05);
+  }
+
+    .bg-cover {
+    background: url('/img/contact/bg-contact.webp') center center/cover no-repeat;
+  }
