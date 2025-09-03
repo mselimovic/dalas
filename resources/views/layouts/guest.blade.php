@@ -18,7 +18,12 @@
     <script src="{{ asset('js/bootstrap/bootstrap.bundle.min.js') }}" defer></script>
     <script src="{{ asset('js/main.js') }}" async="async"></script>
     <script src="{{ asset('js/cookies.js') }}" async="async"></script>
-  
+    <!-- Google tag (gtag.js) -->
+<script>
+  window.APP = window.APP || {};
+  window.APP.gaId = "{{ config('services.ga.id') }}";
+</script>
+
 
     <x-cookie-banner />
 </body>

@@ -36,4 +36,8 @@ class PageController extends Controller
     {
         return view('pages.faq');   
     }
+    public function thankYou()
+    {
+        return view('pages.thank-you');   
+    }
 }

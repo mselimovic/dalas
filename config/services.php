@@ -18,6 +18,14 @@ return [
         'token' => env('POSTMARK_TOKEN'),
     ],
 
+    'recaptcha' => [
+        'site'   => env('RECAPTCHA_SITE_KEY'),
+        'secret' => env('RECAPTCHA_SECRET_KEY'),
+    ],
+    'ga' => [
+        'id' => env('GA_MEASUREMENT_ID'),
+    ],
+
     'resend' => [
         'key' => env('RESEND_KEY'),
     ],

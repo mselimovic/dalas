@@ -70,105 +70,199 @@
 
                 <!-- Right: Form -->
                 <div class="col-12 col-lg-8 bg-white p-4 p-lg-5">
-                    <form method="POST" action="#">
-                        @csrf
 
+                    <form method="POST" id="requestForm" action="{{ route('submit.form') }}">
+                        @csrf
+                        <input type="hidden" name="recaptcha_token" id="recaptcha_token">
+                        <div id="consentHint" class="alert alert-warning py-2 px-3 d-none small mt-2">
+                            Bitte akzeptieren Sie Cookies, um das Formular (reCAPTCHA-Schutz) zu senden.
+                        </div>
                         <div class="row g-4">
                             <div class="col-12 col-md-6">
-                                <label class="form-label small text-muted mb-1">Vorname:</label>
-                                <input type="text" name="first_name" class="form-control line-input" placeholder=""
-                                    required>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <label class="form-label small text-muted mb-1">Nachname:</label>
-                                <input type="text" name="last_name" class="form-control line-input" placeholder=""
-                                    required>
+                                <label class="form-label small text-muted mb-1" for="firstName">Vorname:</label>
+                                <input type="text" id="firstName" name="first_name" class="form-control line-input"
+                                    value="{{ old('first_name') }}" required>
+                                @error('first_name')
+                                    <div class="text-danger small mt-1">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-12 col-md-6">
-                                <label class="form-label small text-muted mb-1">Email:</label>
-                                <input type="email" name="email" class="form-control line-input" placeholder=""
-                                    required>
+                                <label class="form-label small text-muted mb-1" for="lastName">Nachname:</label>
+                                <input type="text" id="lastName" name="last_name" class="form-control line-input"
+                                    value="{{ old('last_name') }}" required>
+                                @error('last_name')
+                                    <div class="text-danger small mt-1">{{ $message }}</div>
+                                @enderror
                             </div>
+
                             <div class="col-12 col-md-6">
-                                <label class="form-label small text-muted mb-1">Telefonnummer:</label>
-                                <input type="tel" name="phone" class="form-control line-input" placeholder="">
+                                <label class="form-label small text-muted mb-1" for="email">Email:</label>
+                                <input type="email" id="email" name="email" class="form-control line-input"
+                                    value="{{ old('email') }}" required>
+                                @error('email')
+                                    <div class="text-danger small mt-1">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label small text-muted mb-1" for="phoneNumber">Telefonnummer:</label>
+                                <input type="tel" id="phoneNumber" name="phone" class="form-control line-input"
+                                    value="{{ old('phone') }}" required>
+                                @error('phone')
+                                    <div class="text-danger small mt-1">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-12">
                                 <label class="form-label mb-2 fw-semibold">Sind Sie Privatkunde oder Gewerbekunde?</label>
-
                                 <div class="row g-3 customer-type">
                                     <div class="col-12 col-md-6">
                                         <input class="btn-check" type="radio" name="customer_type" id="type-privat"
-                                            value="Privatkunde" required>
+                                            value="Privatkunde"
+                                            {{ old('customer_type') === 'Privatkunde' ? 'checked' : '' }} required>
                                         <label
                                             class="btn w-100 border rounded-3 p-3 text-start d-flex align-items-start gap-3"
                                             for="type-privat">
-                                            <!-- Home icon -->
-                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                                                class="mt-1">
-                                                <path
-                                                    d="M3 10.5 12 3l9 7.5V21a1 1 0 0 1-1 1h-6v-6H10v6H4a1 1 0 0 1-1-1v-10.5Z"
-                                                    stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-                                            </svg>
-                                            <span>
-                                                <strong>Privatkunden</strong><br>
+                                            <!-- icon ... --> <span><strong>Privatkunden</strong><br>
                                                 <small class="text-muted">private Kundschaft (Wohnungen, Häuser, private
-                                                    Räume)</small>
-                                            </span>
+                                                    Räume)</small></span>
                                         </label>
                                     </div>
-
                                     <div class="col-12 col-md-6">
                                         <input class="btn-check" type="radio" name="customer_type" id="type-gewerbe"
-                                            value="Gewerbekunde" required>
+                                            value="Gewerbekunde"
+                                            {{ old('customer_type') === 'Gewerbekunde' ? 'checked' : '' }} required>
                                         <label
                                             class="btn w-100 border rounded-3 p-3 text-start d-flex align-items-start gap-3"
                                             for="type-gewerbe">
-                                            <!-- Briefcase icon -->
-                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                                                class="mt-1">
-                                                <path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" stroke="currentColor"
-                                                    stroke-width="2" />
-                                                <rect x="2" y="7" width="20" height="13" rx="2"
-                                                    stroke="currentColor" stroke-width="2" />
-                                                <path d="M2 12h20" stroke="currentColor" stroke-width="2" />
-                                            </svg>
-                                            <span>
-                                                <strong>Gewerbekunden</strong><br>
+                                            <!-- icon ... --> <span><strong>Gewerbekunden</strong><br>
                                                 <small class="text-muted">geschäftliche Kundschaft (Firmen, Büros, Objekte
-                                                    zur Reinigung)</small>
-                                            </span>
+                                                    zur Reinigung)</small></span>
                                         </label>
                                     </div>
                                 </div>
+                                @error('customer_type')
+                                    <div class="text-danger small mt-2">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-12">
-                                <label class="form-label small text-muted mb-1">Nachricht:</label>
-                                <textarea name="message" rows="5" class="form-control line-input" placeholder="" required></textarea>
+                                <label class="form-label small text-muted mb-1" for="message">Nachricht:</label>
+                                <textarea name="message" id="message" rows="5" class="form-control line-input" required>{{ old('message') }}</textarea>
+                                @error('message')
+                                    <div class="text-danger small mt-1">{{ $message }}</div>
+                                @enderror
                             </div>
+
                             <div class="form-check py-2">
                                 <input class="form-check-input" type="checkbox" value="1" id="gdpr_rules"
-                                    name="gdpr_rules">
+                                    name="gdpr_rules" required>
                                 <label class="form-check-label" for="gdpr_rules">
                                     Ich willige ein, dass meine in diesem Formular angegebenen personenbezogenen Daten zum
-                                    Zweck der Bearbeitung meiner Anfrage verarbeitet und gespeichert werden. Weitere
-                                    Hinweise finden Sie in unserer<a href="{{ route('policy') }}"
-                                        class="text-primary ps-1">Datenschutzerklärung</a>
+                                    Zweck der Bearbeitung
+                                    meiner Anfrage verarbeitet und gespeichert werden. Weitere Hinweise finden Sie in
+                                    unserer
+                                    <a href="{{ route('policy') }}" class="text-primary ps-1">Datenschutzerklärung</a>.
                                 </label>
+                                @error('gdpr_rules')
+                                    <div class="text-danger small mt-1">{{ $message }}</div>
+                                @enderror
                             </div>
+
                             <div class="col-12 d-flex justify-content-center justify-content-md-end">
-                                <button type="submit" class="btn btn-dark px-4 py-2">
+                                <button type="submit" id="sendButton" class="btn btn-dark px-4 py-2" disabled>
                                     Nachricht senden
                                 </button>
                             </div>
-
                         </div>
                     </form>
+
                 </div>
             </div>
         </div>
     </div>
+<script>
+(function () {
+  const form   = document.getElementById('requestForm');
+  const tokenI = document.getElementById('recaptcha_token');
+  const hint   = document.getElementById('consentHint');
+
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    // Require consent before we can use reCAPTCHA (and set cookies)
+    const hasConsent = document.cookie.includes('cookie_consent=true');
+    if (!hasConsent) {
+      e.preventDefault();
+      if (hint) hint.classList.remove('d-none');
+      return;
+    }
+
+    // Ensure API is loaded
+    if (typeof grecaptcha === 'undefined' || !window.APP || !window.APP.recaptchaSiteKey) {
+      e.preventDefault();
+      if (hint) { hint.textContent = 'reCAPTCHA konnte nicht geladen werden. Bitte Seite neu laden.'; hint.classList.remove('d-none'); }
+      return;
+    }
+
+    // Intercept submit, get v3 token, then submit
+    e.preventDefault();
+    grecaptcha.ready(function () {
+      grecaptcha.execute(window.APP.recaptchaSiteKey, {action: 'contact'})
+        .then(function (token) {
+          tokenI.value = token;
+          form.submit(); // now do the real submit
+        })
+        .catch(function () {
+          if (hint) { hint.textContent = 'reCAPTCHA fehlgeschlagen. Bitte versuchen Sie es erneut.'; hint.classList.remove('d-none'); }
+        });
+    });
+  });
+})();
+</script>
+
+    <script>
+        (function() {
+            function ready(fn) {
+                if (document.readyState !== 'loading') fn();
+                else document.addEventListener('DOMContentLoaded', fn);
+            }
+
+            ready(function() {
+                const form = document.getElementById('requestForm');
+                const sendButton = document.getElementById('sendButton');
+                const gdpr = document.getElementById('gdpr_rules');
+
+                if (!form || !sendButton || !gdpr) return;
+
+
+                const update = () => {
+                    const meetsRequirements = gdpr.checked && form.checkValidity();
+                    sendButton.disabled = !meetsRequirements;
+                    sendButton.classList.toggle('disabled', !meetsRequirements);
+                };
+
+
+                form.addEventListener('input', update, true);
+                form.addEventListener('change', update, true);
+
+
+                form.addEventListener('submit', function(e) {
+
+                    if (!form.checkValidity() || !gdpr.checked) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        update();
+                        return;
+                    }
+                    sendButton.disabled = true;
+                    sendButton.classList.add('disabled');
+                });
+                update();
+
+                window.addEventListener('pageshow', update);
+            });
+        })();
+    </script>
 @endsection
