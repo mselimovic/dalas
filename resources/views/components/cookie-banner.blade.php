@@ -9,9 +9,10 @@
                 <a href="{{ route('policy') }}" class="text-primary">Datenschutzerklärung</a>.
             </p>
             <div class="d-flex gap-2 mb-2 mb-md-0">
-                <button type="button" id="cookie-accept" class="btn"
+                <button id="cookie-accept" type="button" class="btn"
                     style="background-color:#00a86b">Akzeptieren</button>
-                <button type="button" id="cookie-reject" class="btn btn-outline-light">Ablehnen</button>
+                <button id="cookie-reject" type="button" class="btn btn-outline-light">Ablehnen</button>
+
             </div>
         </div>
     </div>

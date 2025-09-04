@@ -182,46 +182,6 @@
             </div>
         </div>
     </div>
-<script>
-(function () {
-  const form   = document.getElementById('requestForm');
-  const tokenI = document.getElementById('recaptcha_token');
-  const hint   = document.getElementById('consentHint');
-
-  if (!form) return;
-
-  form.addEventListener('submit', function (e) {
-    // Require consent before we can use reCAPTCHA (and set cookies)
-    const hasConsent = document.cookie.includes('cookie_consent=true');
-    if (!hasConsent) {
-      e.preventDefault();
-      if (hint) hint.classList.remove('d-none');
-      return;
-    }
-
-    // Ensure API is loaded
-    if (typeof grecaptcha === 'undefined' || !window.APP || !window.APP.recaptchaSiteKey) {
-      e.preventDefault();
-      if (hint) { hint.textContent = 'reCAPTCHA konnte nicht geladen werden. Bitte Seite neu laden.'; hint.classList.remove('d-none'); }
-      return;
-    }
-
-    // Intercept submit, get v3 token, then submit
-    e.preventDefault();
-    grecaptcha.ready(function () {
-      grecaptcha.execute(window.APP.recaptchaSiteKey, {action: 'contact'})
-        .then(function (token) {
-          tokenI.value = token;
-          form.submit(); // now do the real submit
-        })
-        .catch(function () {
-          if (hint) { hint.textContent = 'reCAPTCHA fehlgeschlagen. Bitte versuchen Sie es erneut.'; hint.classList.remove('d-none'); }
-        });
-    });
-  });
-})();
-</script>
-
     <script>
         (function() {
             function ready(fn) {
