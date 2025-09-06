@@ -3,7 +3,7 @@ const Consent = {
   name: 'cookie_consent',
   get() {
     return document.cookie.split(';').map(v => v.trim())
-      .find(v => v.startsWith(this.name+'='))?.split('=')[1] || null;
+      .find(v => v.startsWith(this.name + '='))?.split('=')[1] || null;
   },
   hasTrue() { return this.get() === 'true'; },
   set(val) {
@@ -14,7 +14,7 @@ const Consent = {
   }
 };
 
-function onReady(fn){
+function onReady(fn) {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', fn);
   } else {
@@ -32,7 +32,7 @@ function loadAnalytics() {
   document.head.appendChild(s);
 
   window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
+  function gtag() { dataLayer.push(arguments); }
   window.gtag = window.gtag || gtag;
 
   gtag('js', new Date());
@@ -41,9 +41,9 @@ function loadAnalytics() {
 
 let recaptchaReady = null;
 function loadRecaptcha() {
-  if (!document.getElementById('requestForm')) return;              
+  if (!document.getElementById('requestForm')) return;
   if (!window.APP || !window.APP.recaptchaSiteKey) return;
-  if (typeof grecaptcha !== 'undefined') {                          
+  if (typeof grecaptcha !== 'undefined') {
     if (!recaptchaReady) {
       recaptchaReady = new Promise(resolve => grecaptcha.ready(() => resolve(true)));
     }
@@ -55,19 +55,19 @@ function loadRecaptcha() {
     const s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.google.com/recaptcha/api.js?render=' + encodeURIComponent(window.APP.recaptchaSiteKey);
-    s.onload = function(){
+    s.onload = function () {
       if (typeof grecaptcha !== 'undefined') {
         grecaptcha.ready(() => resolve(true));
       }
     };
-    s.onerror = function(){ resolve(false); };
+    s.onerror = function () { resolve(false); };
     document.head.appendChild(s);
   });
 }
 
 
-function initCookieBanner(){
-  const banner   = document.getElementById('cookie-banner');
+function initCookieBanner() {
+  const banner = document.getElementById('cookie-banner');
   const acceptEl = document.getElementById('cookie-accept');
   const rejectEl = document.getElementById('cookie-reject');
 
@@ -77,7 +77,7 @@ function initCookieBanner(){
     loadRecaptcha();
   }
 
-  if (!banner) return; 
+  if (!banner) return;
 
   const setConsent = (value) => {
     Consent.set(value);
@@ -93,7 +93,7 @@ function initCookieBanner(){
   if (rejectEl) rejectEl.addEventListener('click', e => { e.preventDefault(); setConsent('false'); });
 
 
-  document.addEventListener('click', function(ev){
+  document.addEventListener('click', function (ev) {
     const t = ev.target;
     if (!t) return;
     if (t.id === 'cookie-accept') { ev.preventDefault(); setConsent('true'); }
@@ -103,13 +103,13 @@ function initCookieBanner(){
 
 
 function initContactForm() {
-  const form   = document.getElementById('requestForm');
+  const form = document.getElementById('requestForm');
   if (!form) return;
 
   const tokenI = document.getElementById('recaptcha_token');
-  const hint   = document.getElementById('consentHint');
+  const hint = document.getElementById('consentHint');
 
-  form.addEventListener('submit', function(e){
+  form.addEventListener('submit', function (e) {
 
     if (!Consent.hasTrue()) {
       e.preventDefault();
@@ -122,7 +122,7 @@ function initContactForm() {
 
 
     e.preventDefault();
-    (recaptchaReady || Promise.resolve(false)).then(function(ok){
+    (recaptchaReady || Promise.resolve(false)).then(function (ok) {
       if (!ok || typeof grecaptcha === 'undefined') {
         if (hint) {
           hint.textContent = 'reCAPTCHA konnte nicht geladen werden. Bitte Seite neu laden.';
@@ -131,11 +131,11 @@ function initContactForm() {
         return;
       }
       grecaptcha.execute(window.APP.recaptchaSiteKey, { action: 'contact' })
-        .then(function(token){
+        .then(function (token) {
           tokenI.value = token;
           form.submit();
         })
-        .catch(function(){
+        .catch(function () {
           if (hint) {
             hint.textContent = 'reCAPTCHA fehlgeschlagen. Bitte versuchen Sie es erneut.';
             hint.classList.remove('d-none');
@@ -146,13 +146,13 @@ function initContactForm() {
 }
 
 
-onReady(function(){
+onReady(function () {
   initCookieBanner();
   initContactForm();
 });
 
 
-window.addEventListener('pageshow', function(){ 
+window.addEventListener('pageshow', function () {
   if (Consent.hasTrue()) { loadAnalytics(); loadRecaptcha(); }
 });
 

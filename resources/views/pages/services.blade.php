@@ -103,7 +103,7 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="svc-card">
                         <div class="svc-icon-bubble">
-                            <img src="/img/homepage/rake.png" alt="Gartenpflege">
+                            <img src="/img/homepage/rake.webp" alt="Gartenpflege">
                         </div>
                         <h5 class="fw-bold text-primary text-center">Gartenpflege</h5>
                         <p class="text-muted small text-center">
@@ -158,17 +158,17 @@
             <div class="row g-3 svc-work-grid">
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="img-wrap" style="aspect-ratio: 4/3;">
-                        <img src="/img/homepage/showcase.png" alt="Reinigungsbeispiel 1">
+                        <img src="/img/homepage/showcase.webp" alt="Reinigungsbeispiel 1">
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="img-wrap" style="aspect-ratio: 4/3;">
-                        <img src="/img/homepage/showcase2.png" alt="Reinigungsbeispiel 2">
+                        <img src="/img/homepage/showcase2.webp" alt="Reinigungsbeispiel 2">
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="img-wrap" style="aspect-ratio: 4/3;">
-                        <img src="/img/homepage/showcase3.png" alt="Reinigungsbeispiel 3">
+                        <img src="/img/homepage/showcase3.webp" alt="Reinigungsbeispiel 3">
                     </div>
                 </div>
             </div>

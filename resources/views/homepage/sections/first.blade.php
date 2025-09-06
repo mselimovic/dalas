@@ -56,15 +56,4 @@
 
         </div>
     </div>
-
-    {{-- <div class="d-flex align-items-end justify-content-end position-relative mt-5">
-                    <!-- Horizontal line -->
-                    <div class="flex-grow-1 border-top border-primary" style="border-width: 2px;"></div>
-
-                    <!-- Icon -->
-                    <div class="bg-white d-flex align-items-center justify-content-center ms-2">
-                        <img src="img/homepage/cleaner-icon.webp" alt="Reinigung" class="img-fluid"
-                            style="width: 40px; height: 40px;">
-                    </div>
-                </div> --}}
 </section>

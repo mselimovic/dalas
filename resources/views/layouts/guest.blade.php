@@ -1,6 +1,6 @@
-@include('layouts.header')
 
 <body>
+    @include('layouts.header')
     {{-- navbar --}}
     @section('navbar')
         @include('layouts.navbar')
@@ -12,18 +12,13 @@
         @include('layouts.footer')
     @show
 
+    <x-cookie-banner />
 
     {{-- js --}}
-    {{-- <script src="{{ asset('js/main.js') }}" async="async"></script> --}}
     <script src="{{ asset('js/bootstrap/bootstrap.bundle.min.js') }}" defer></script>
-    <script src="{{ asset('js/main.js') }}" async="async"></script>
-    <script>
-        window.APP = {
-            gaId: "{{ config('services.ga.id') }}",
-            recaptchaSiteKey: "{{ config('services.recaptcha.site') }}"
-        };
-    </script>
-    <script src="{{ asset('js/cookies.js') }}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js" defer></script>
+    <script src="{{ asset('js/main.min.js') }}" defer></script>
+    <script src="{{ asset('js/cookies.min.js') }}" defer></script>
 
-    <x-cookie-banner />
+
 </body>

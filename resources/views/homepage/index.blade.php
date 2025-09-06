@@ -7,3 +7,4 @@
 @include('homepage.sections.fourth')
 @include('homepage.sections.fifth')
 @include('homepage.sections.last')
+@endsection

@@ -72,7 +72,7 @@
                     <a href="{{ route('services') }}" style="text-decoration: none;">
                         <div class="service-card">
                             <div class="icon-circle mb-3">
-                                <img src="/img/homepage/rake.png" alt="Gartenpflege">
+                                <img src="/img/homepage/rake.webp" alt="Gartenpflege">
                             </div>
                             <h5 class="fw-bold text-primary">Gartenpflege</h5>
                             <p class="text-muted small">Mit unserer zuverlässigen Gartenpflege bleibt Ihr Außenbereich
@@ -109,53 +109,3 @@
     </div>
 </section>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        new Glider(document.querySelector('.glider'), {
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            draggable: true,
-            rewind: true,
-            arrows: {
-                prev: '.glider-prev',
-                next: '.glider-next'
-            },
-            responsive: [{
-                    breakpoint: 320,
-                    settings: {
-                        slidesToShow: 1,
-                        dots: '#dots'
-                    }
-                },
-                {
-                    breakpoint: 576,
-                    settings: {
-                        slidesToShow: 1,
-                        dots: '#dots'
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                        dots: '#dots'
-                    }
-                },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 3,
-                        dots: '#dots'
-                    }
-                },
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 4,
-                        dots: '#dots'
-                    }
-                }
-            ]
-        });
-    });
-</script>
