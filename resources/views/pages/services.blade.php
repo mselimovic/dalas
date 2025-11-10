@@ -171,6 +171,21 @@
                         <img src="/img/homepage/showcase3.webp" alt="Reinigungsbeispiel 3">
                     </div>
                 </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="img-wrap" style="aspect-ratio: 4/3;">
+                        <img src="/img/homepage/showcase4.webp" alt="Reinigungsbeispiel 4">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="img-wrap" style="aspect-ratio: 4/3;">
+                        <img src="/img/homepage/showcase5.webp" alt="Reinigungsbeispiel 5">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="img-wrap" style="aspect-ratio: 4/3;">
+                        <img src="/img/homepage/showcase7.webp" alt="Reinigungsbeispiel 6">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

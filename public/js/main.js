@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener("DOMContentLoaded", function() {
         // Configuration - dynamic based on screen size
         let itemsPerSlide = window.innerWidth < 720 ? 1 : 3; // Responsive items per slide
-        const totalItems = 3; // Total real items (without clones)
+        const totalItems = 8; // Total real items (without clones)
         let slideBy = window.innerWidth < 720 ? 1 : 1; // How many items to advance/retreat per click
 
         // DOM elements

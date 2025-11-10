@@ -55,7 +55,7 @@
                                 stroke-linecap="round" stroke-linejoin="round" />
                             <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" />
                         </svg>
-                        <span>75181 Pforzheim, Germany</span>
+                        <span>Jägerstrasse 7 75181 Pforzheim, Deutschland</span>
                     </div>
 
                     <div class="d-flex gap-3">

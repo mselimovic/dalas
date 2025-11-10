@@ -815,3 +815,23 @@ h6 {
             flex: 0 0 100%;
         }
     }
+
+    /* testemonial  */
+
+   .avatar-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #d93025;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    box-shadow: 0 2px 6px rgba(138, 127, 127, 0.1);
+}
+.initial {
+    line-height: 1;
+}

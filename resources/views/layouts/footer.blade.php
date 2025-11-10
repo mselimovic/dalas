@@ -22,7 +22,7 @@
           </div>
           <div class="col-md-6 col-lg-4 wow fadeIn px-5 " data-wow-delay="0.7s">
              <h5 class="text-primary mb-4">Kontakt</h5>
-              <p class="text-white"><i class="fa fa-map-marker-alt mx-2"></i>75181 Pforzheim, Germany</p>
+              <p class="text-white"><i class="fa fa-map-marker-alt mx-2"></i>Jägerstrasse 7 <br> <span class="px-2"> 75181 Pforzheim, Deutschland</span></p>
               <p class="text-white"><i class="fa fa-phone-alt mx-2"></i>0176 329 493 64 / 015 75 6464 139</p>
               <p class="text-white"><i class="fa fa-envelope mx-2"></i>info@dalas-pf.de </p>
 

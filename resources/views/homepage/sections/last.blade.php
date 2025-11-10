@@ -37,7 +37,7 @@
           </div>
           <div>
             <h6 class="mb-1 fw-semibold">Adresse</h6>
-            <p class="text-muted small mb-0">75181 Pforzheim, Germany</p>
+            <p class="text-muted small mb-0">Jägerstrasse 7 75181 Pforzheim, Deutschland</p>
           </div>
         </div>
       <a href="{{ route('contact') }}" class="btn btn-primary w-100 mt-3">Zum Kontaktformular</a>

@@ -22,6 +22,31 @@
                             <img src="/img/homepage/showcase3.webp" alt="Image 3">
                         </div>
                     </div>
+                     <div class="multi-carousel-item" data-index="4">
+                        <div class="img-container"><span class="item-number">4</span>
+                            <img src="/img/homepage/showcase4.webp" alt="Image 4">
+                        </div>
+                    </div>
+                     <div class="multi-carousel-item" data-index="5">
+                        <div class="img-container"><span class="item-number">5</span>
+                            <img src="/img/homepage/showcase5.webp" alt="Image 5">
+                        </div>
+                    </div>
+                     <div class="multi-carousel-item" data-index="6">
+                        <div class="img-container"><span class="item-number">6</span>
+                            <img src="/img/homepage/showcase6.webp" alt="Image 6">
+                        </div>
+                    </div>
+                     <div class="multi-carousel-item" data-index="7">
+                        <div class="img-container"><span class="item-number">7</span>
+                            <img src="/img/homepage/showcase7.webp" alt="Image 7">
+                        </div>
+                    </div>
+                     <div class="multi-carousel-item" data-index="8">
+                        <div class="img-container"><span class="item-number">8</span>
+                            <img src="/img/homepage/showcase8.webp" alt="Image 8">
+                        </div>
+                    </div>
 
                 </div>
 
