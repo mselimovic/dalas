@@ -6,5 +6,6 @@
 @include('homepage.sections.third')
 @include('homepage.sections.fourth')
 @include('homepage.sections.fifth')
+@include('homepage.sections.pre-last')
 @include('homepage.sections.last')
 @endsection
